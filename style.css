@@ -1,0 +1,245 @@
+/* Regular Fonts */
+@font-face { font-family: Ubuntu-Mono; 
+    src: url("https://ionq.com/static/UbuntuMono-Regular-9135661735f7194bb65bffdfaf9fb204.woff2") format("woff2"), url("https://ionq.com/static/UbuntuMono-Regular-1b36b67c5a2869076128f7bbb6dd37e4.woff") format("woff"); 
+    font-style: normal; 
+    font-weight: 400; 
+    font-display: fallback; 
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-Book.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-Black.otf') format('opentype');
+    font-weight: 900; 
+    font-style: normal;
+}
+
+/* Italic fonts */
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-BookItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-MediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url('font_circular/CircularStd-BlackItalic.otf') format('opentype');
+    font-weight: 900; 
+    font-style: italic;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Circular, Arial, sans-serif;
+}
+
+#link-buttons a {
+    padding: 0.5rem 0.7rem;
+    margin: 0 0.5rem;
+    background: #FF8200;
+    background: linear-gradient(45deg, rgba(255,80,0,1) 0%, rgba(255,130,0,1) 65%, rgba(255,182,0,1) 100%); 
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    position: relative;
+    top: 1rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: Ubuntu-Mono, monospace;
+}
+
+
+#header-image {
+    position: fixed; /* Positioning it relative to the viewport */
+    top: 0; /* Aligning it to the top */
+    right: 0; /* Aligning it to the right */
+    z-index: 0; 
+}
+
+#footer-image {
+    position: fixed; /* Positioning it relative to the viewport */
+    bottom: 0; /* Aligning it to the bottom */
+    left: 0; /* Aligning it to the left */
+    z-index: 0; 
+}
+
+.icon p, .icon img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#learning-text {
+    font-size: 2rem;
+}
+
+#certificate-info {
+    position: fixed; /* Positioning it relative to the viewport */
+    margin: 1rem;
+    bottom: 0; /* Aligning it to the bottom */
+    right: 0; /* Aligning it to the left */
+    z-index: 3; 
+    color: white;
+    text-align: right;
+}
+
+#logo-top-left {
+    position: fixed; /* Positioning it relative to the viewport */
+    top: 20px; /* Aligning it to the top */
+    left: 20px; /* Aligning it to the right */
+    z-index: 1; 
+}
+
+
+#wave-bottom-right {
+    position: fixed; /* Positioning it relative to the viewport */
+    bottom: 0; /* Aligning it to the bottom */
+    right: 0; /* Aligning it to the left */
+    z-index: 1; 
+}
+
+#footer-right {
+    position: fixed; /* Positioning it relative to the viewport */
+    bottom: 0; /* Aligning it to the bottom */
+    right: 0; /* Aligning it to the left */
+    z-index: 2; 
+}
+
+#wave-top-left {
+    position: fixed; /* Positioning it relative to the viewport */
+    top: 0; /* Aligning it to the top */
+    left: 0; /* Aligning it to the right */
+    z-index: 0; 
+}
+
+
+
+#text-container {
+    text-align: center;
+    margin: auto;
+}
+
+
+.container {
+    text-align: center;
+    z-index: 99;
+    max-width: 85%;
+}
+
+#recipient-name {
+    font-size: 2rem;
+}
+
+#recognition {
+    width: 80%;
+    margin: 1rem auto 2rem auto;
+}
+
+#certifiers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}   
+
+
+@media screen and (width < 1200px) {
+
+    #header-image, #footer-image, #footer-right {
+        max-width: 40vw;
+    }
+
+    #wave-bottom-right, #wave-top-left {
+        max-width: 32vw;
+    }
+
+    #certificate-info {
+        position: fixed; 
+        bottom: 0; 
+        z-index: 3; 
+        text-align: center;
+        font-size: 0.65rem;
+        color: black;
+        margin: 2.5rem;
+        right: auto;
+        font-weight: 200;
+    }
+
+    #logo-top-left {
+        max-width: 30vw;
+    }
+
+    #recognition, #certifiers {
+        font-size: 0.88rem;
+    }
+    
+}
+
+@media screen and (width < 800px) {
+    .icon {
+        margin-bottom: 1rem;
+    }
+    p {
+        margin: 0.4rem 0;
+    }
+
+    #header-image, #footer-image, #footer-right {
+        max-width: 50vw;
+    }
+
+    #wave-bottom-right, #wave-top-left {
+        max-width: 32vw;
+    }
+
+    #certificate-info {
+        font-size: 0.5rem;
+    }
+
+    #logo-top-left {
+        max-width: 30vw;
+    }
+
+    #recognition, #certifiers {
+        font-size: 0.7rem;
+    }
+    
+}
+
