@@ -71,19 +71,20 @@ body, html {
     justify-content: center;
     align-items: center;
     font-family: Circular, Arial, sans-serif;
+
 }
 
 #link-buttons a {
-    padding: 0.5rem 0.7rem;
-    margin: 0 0.5rem;
+    padding: 0.5em 0.7em;
+    margin: 0 0.5em;
     background: #FF8200;
     background: linear-gradient(45deg, rgba(255,80,0,1) 0%, rgba(255,130,0,1) 65%, rgba(255,182,0,1) 100%); 
     color: white;
     border: 0;
-    border-radius: 4px;
+    border-radius: 0.3em;
     position: relative;
-    top: 1rem;
-    font-size: 0.8rem;
+    top: 1em;
+    font-size: 0.9em;
     text-decoration: none;
     font-family: Ubuntu-Mono, monospace;
 }
@@ -93,7 +94,7 @@ body, html {
     position: fixed; /* Positioning it relative to the viewport */
     top: 0; /* Aligning it to the top */
     right: 0; /* Aligning it to the right */
-    z-index: 0; 
+    z-index: 2; 
 }
 
 #footer-image {
@@ -103,18 +104,20 @@ body, html {
     z-index: 0; 
 }
 
+
+
 .icon p, .icon img {
     vertical-align: middle;
     display: inline-block;
 }
 
 #learning-text {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 #certificate-info {
     position: fixed; /* Positioning it relative to the viewport */
-    margin: 1rem;
+    margin: 1em;
     bottom: 0; /* Aligning it to the bottom */
     right: 0; /* Aligning it to the left */
     z-index: 3; 
@@ -122,11 +125,16 @@ body, html {
     text-align: right;
 }
 
+#learning-logo {
+    height: 3em;
+}
+
 #logo-top-left {
     position: fixed; /* Positioning it relative to the viewport */
-    top: 20px; /* Aligning it to the top */
-    left: 20px; /* Aligning it to the right */
+    top: 2vw; /* Aligning it to the top */
+    left: 2vw; /* Aligning it to the right */
     z-index: 1; 
+    min-height: 4vh;
 }
 
 
@@ -166,12 +174,12 @@ body, html {
 }
 
 #recipient-name {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 #recognition {
     width: 80%;
-    margin: 1rem auto 2rem auto;
+    margin: 1em auto 2em auto;
 }
 
 #certifiers {
@@ -180,6 +188,22 @@ body, html {
     flex-wrap: wrap;
 }   
 
+
+
+
+@media screen and (width > 1300px) {
+    body {
+        font-size: 1vw;
+    }
+    #header-image, #footer-image, #footer-right {
+        width: 30vw;
+    }
+
+    #wave-bottom-right, #wave-top-left {
+        width: 20vw;
+    }
+    
+}
 
 @media screen and (width < 1200px) {
 
@@ -196,9 +220,9 @@ body, html {
         bottom: 0; 
         z-index: 3; 
         text-align: center;
-        font-size: 0.65rem;
+        font-size: 0.65em;
         color: black;
-        margin: 2.5rem;
+        margin: 2.5em;
         right: auto;
         font-weight: 200;
     }
@@ -208,29 +232,26 @@ body, html {
     }
 
     #recognition, #certifiers {
-        font-size: 0.88rem;
+        font-size: 0.88em;
     }
     
 }
 
 @media screen and (width < 800px) {
     .icon {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
     p {
-        margin: 0.4rem 0;
+        margin: 0.4em 0;
     }
 
     #header-image, #footer-image, #footer-right {
         max-width: 50vw;
     }
 
-    #wave-bottom-right, #wave-top-left {
-        max-width: 32vw;
-    }
-
     #certificate-info {
-        font-size: 0.5rem;
+        font-size: 0.5em;
+        bottom: 3em;
     }
 
     #logo-top-left {
@@ -238,24 +259,48 @@ body, html {
     }
 
     #recognition, #certifiers {
-        font-size: 0.7rem;
+        font-size: 0.7em;
     }
     
 }
 
 
-@media screen and (height < 750px) {
-    .container, #recognition, #certifiers {
-        font-size: 0.6rem;
-    }
 
-    #learning-text {
-        font-size: 1.8rem;
-    }
-
-    #recipient-name {
-        font-size: 1.5rem;
+@media screen and (height < 700px) and (width < 450px) {
+    body {
+        font-size: 2vh;
     }
 
 }
 
+@media screen and (aspect-ratio >= 3/2) and (width < 1300px) {
+    body {
+        font-size: 1vw;
+    }
+
+    #header-image, #footer-image, #footer-right {
+        max-height: 27vw;
+    }
+
+    #wave-bottom-right, #wave-top-left {
+        max-height: 27vw;
+    }
+
+}
+
+@media screen and (aspect-ratio >= 2/1) {
+    body {
+        font-size: 1vw;
+    }
+
+    #header-image, #footer-image, #footer-right {
+        max-height: 50vh;
+        width: auto;
+    }
+
+    #wave-bottom-right, #wave-top-left {
+        max-height: 50vh;
+        width: auto;
+    }
+
+}
